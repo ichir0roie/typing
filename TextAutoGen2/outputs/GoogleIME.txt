@@ -1,0 +1,312 @@
+1	_
+2	！
+3	？
+4	～
+5	＠
+6	＃
+7	・
+8	「
+9	」
+0	(
+-	)
+^	＝
+\	~
+	
+q	に
+w	と
+e	か
+r	は
+t	ち
+y	ぐ
+u	こ
+i	い
+o	し
+p	ば
+@	ひ
+[	￥
+	
+a	の
+s	
+d	
+f	ん
+g	っ
+h	く
+j	う
+k	
+l	
+;	な
+:	ー
+]	※
+	
+z	す
+x	ま
+c	き
+v	る
+b	つ
+n	て
+m	た
+,	で
+.	が
+/	ぶ
+\	:
+	
+!	にょ
+"	ひゃ
+#	ぎゅ
+$	うぇ
+%	でゅ
+&	びゅ
+'	うぃ
+(	ぴょ
+)	ふぇ
+	うぉ
+=	ひゅ
+~	
+@@@	
+	
+Q	みょ
+W	ぎょ
+E	ちゅ
+R	ふぉ
+T	ちぇ
+Y	りゃ
+U	じぇ
+I	きゅ
+O	ひょ
+P	びゃ
+`	にゃ
+{	みゃ
+	
+A	ちょ
+S	しゃ
+D	じょ
+F	しゅ
+G	きゃ
+H	みゅ
+J	しょ
+K	きょ
+L	りょ
++	じゅ
+*	ぴゅ
+}	しぇ
+	
+Z	ふぁ
+X	びょ
+C	てぃ
+V	にゅ
+B	ふぃ
+N	ぎゃ
+M	ちゃ
+<	じゃ
+>	でぃ
+?	りゅ
+_	
+	
+k1	
+k2	
+k3	
+k4	
+k5	
+k6	
+k7	
+k8	
+k9	
+k0	
+k-	
+k^	
+k\	
+k	
+kq	ぉ
+kw	ご
+ke	ふ
+kr	げ
+kt	ぁ
+ky	
+ku	
+ki	
+ko	
+kp	
+k@	
+k[	
+k	
+ka	ほ
+ks	じ
+kd	れ
+kf	も
+kg	ゆ
+kh	
+kj	
+kk	
+kl	。
+k;	
+k:	
+k]	
+k	
+kz	づ
+kx	ぞ
+kc	ぼ
+kv	む
+kb	ゅ
+kn	
+km	
+k,	
+k.	
+k/	
+k\	
+k	
+d1	
+d2	
+d3	
+d4	
+d5	
+d6	
+d7	
+d8	
+d9	
+d0	
+d-	
+d^	
+d\	
+d	
+dq	
+dw	
+de	
+dr	
+dt	
+dy	ょ
+du	ぱ
+di	よ
+do	み
+dp	ぅ
+d@	
+d[	
+d	
+da	
+ds	、
+dd	
+df	
+dg	
+dh	へ
+dj	あ
+dk	れ
+dl	お
+d;	え
+d:	
+d]	
+d	
+dz	
+dx	
+dc	
+dv	
+db	
+dn	せ
+dm	ね
+d,	べ
+d.	ぷ
+d/	ヴ
+d\	
+d	
+l1	
+l2	
+l3	
+l4	
+l5	
+l6	
+l7	
+l8	
+l9	
+l0	
+l-	
+l^	
+l\	
+l	
+lq	ぃ
+lw	め
+le	け
+lr	ゃ
+lt	ぢ
+ly	
+lu	
+li	
+lo	
+lp	
+l@	
+l[	
+l	
+la	を
+ls	さ
+ld	お
+lf	り
+lg	ず
+lh	
+lj	
+lk	。
+ll	
+l;	
+l:	
+l]	
+l	
+lz	ぜ
+lx	ざ
+lc	ぎ
+lv	ろ
+lb	ぬ
+ln	
+lm	
+l,	
+l.	
+l/	
+l\	
+l	
+s1	
+s2	
+s3	
+s4	
+s5	
+s6	
+s7	
+s8	
+s9	
+s0	
+s-	
+s^	
+s\	
+s	
+sq	
+sw	
+se	
+sr	
+st	
+sy	
+su	ぺ
+si	ど
+so	や
+sp	ぇ
+s@	
+s[	
+s	
+sa	
+ss	
+sd	、
+sf	
+sg	
+sh	び
+sj	ら
+sk	じ
+sl	さ
+s;	そ
+s:	
+s]	
+s	
+sz	
+sx	
+sc	
+sv	
+sb	
+sn	わ
+sm	だ
+s,	ぴ
+s.	ぽ
+s/	ゎ
+s\	
+s	
