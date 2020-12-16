@@ -1,0 +1,54 @@
+ìØéûÇ…ë≈åÆÇ∑ÇÈîzóÒ
+
+[
+\|{{}|{}}|'|@|{#}|"|[|]|(|)|*|~|
+q|w|e|r|t|y|u|i|o|p|=|-|
+a|s|d|f|g|h|j|k|l|;|:|{+}|
+z|x|c|v|b|n|m|,|.|/|:|
+]
+
+ [temp shortcut] 
+-shift[
+|||||||||||||
+{LButton}---{enter}|{LButton}^a{delete}---|{LButton}^a{delete}yyyy/mm/dd|{LButton}yyyy/mm/dd{enter}|||||||||
+|^{PgDn}|{esc}{esc}^{home}|{LButton}^a{delete}|{left}{left}{left}{A_Mon}/{A_MDay}{space}{A_Hour}:{A_Min}{enter}{Right}{Right}{Right}^c||||||||
+|^{PgUp}|{esc}{esc}^a|{LButton}{delete}||||||||
+]
+
+/*
+-shift[
+_|%|$|{~}|_dyu|_byu|_wi|`|{^}|_wxo||||
+Q  |W |E  |R |T |Y  |U |I |O |P|{!}|_sye|
+A  |S |D  |F |G |H  |J |K |L |{&}|?|_mya|
+Z  |X |C  |V |B |N  |M |< |> |@@@||
+]
+*/s
+
+/* [2] */
++03[
+|||||||||||||
+||{A_Hour}:{A_Min}|{A_Mon}/{A_MDay}{space}{A_Hour}:{A_Min}|||||||||
+||{A_Mon}/{A_MDay}|{A_Year}{A_Mon}{A_MDay}|||||||||
+||{A_Year}/|||||||||
+]
+
+
+/* [3] */
++04[
+|||||||||||||
+|||Åõ|Å†||||||||
+|||Å~|Å¢||||||||
+|||||||||||
+]
+
+
+
+
+/*
+-[
+|||||||||||||
+||||||||||||
+||||||||||||
+|||||||||||
+]
+*/
