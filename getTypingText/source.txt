@@ -1,0 +1,151 @@
+<p class="kana">(たぬきねいり)</p>
+<p class="kanji">たぬき寝入り</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(さとがえり)</p>
+<p class="kanji">里帰り</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ことばづかい)</p>
+<p class="kanji">言葉遣い</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(へいこうしへんけい)</p>
+<p class="kanji">平行四辺形</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ひがえりおんせん)</p>
+<p class="kanji">日帰り温泉</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ぺんだんと)</p>
+<p class="kanji">ペンダント</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(むかいかぜ)</p>
+<p class="kanji">向かい風</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ぞうきばやし)</p>
+<p class="kanji">雑木林</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ぶっしゅどのえる)</p>
+<p class="kanji">ブッシュドノエル</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(じょやのかね)</p>
+<p class="kanji">除夜の鐘</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(げんそうてき)</p>
+<p class="kanji">幻想的</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(でんとうぎょうじ)</p>
+<p class="kanji">伝統行事</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(あわてふためく)</p>
+<p class="kanji">慌てふためく</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(あざやかないろ)</p>
+<p class="kanji">鮮やかな色</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(きんぴらごぼう)</p>
+<p class="kanji">きんぴらごぼう</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ゆたんぽ)</p>
+<p class="kanji">湯たんぽ</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ならのだいぶつ)</p>
+<p class="kanji">奈良の大仏</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(べびーかー)</p>
+<p class="kanji">ベビーカー</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ぱーてぃーぐっず)</p>
+<p class="kanji">パーティーグッズ</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(しゃこうじれい)</p>
+<p class="kanji">社交辞令</p>
+</p>
+</div>
+<div class="startQuestion etc">など</div>
+<div class="moreQuestion">
+<div class="question">
+<p class="kana">(あたらしいだうんじゃけっとがほしいな)</p>
+<p class="kanji">新しいダウンジャケットが欲しいな</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(きらきらかがやくいるみねーしょん)</p>
+<p class="kanji">キラキラ輝くイルミネーション</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ことしはすのーぼーどにちょうせんだ)</p>
+<p class="kanji">今年はスノーボードに挑戦だ</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(まちにまったくりすます)</p>
+<p class="kanji">待ちに待ったクリスマス</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(よいおとしをおむかえください)</p>
+<p class="kanji">良いお年をお迎えください</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ふたりでかたをよせあってあるく)</p>
+<p class="kanji">二人で肩を寄せ合って歩く</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(ふかふかのまふらーをまいてごまんえつ)</p>
+<p class="kanji">ふかふかのマフラーを巻いてご満悦</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(なにをぷれぜんとしたらいいんだろう)</p>
+<p class="kanji">何をプレゼントしたらいいんだろう</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(のどもとすぎればあつさをわすれる)</p>
+<p class="kanji">喉元過ぎれば熱さを忘れる</p>
+</p>
+</div>
+<div class="question">
+<p class="kana">(もこもこにかさねぎをしてでかける)</p>
+<p class="kanji">もこもこに重ね着をして出かける</p>
+</p>
+</div>
