@@ -21,6 +21,11 @@ namespace myTyping.Code
             answers = new List<questionData>();
         }
 
+        public int getRemain()
+        {
+            return questions.Count;
+        }
+
         public void setQuestions(string[] texts)
         {
             foreach(var text in texts)
@@ -35,9 +40,9 @@ namespace myTyping.Code
 
             quesPlace = new Random().Next(0,questions.Count);
 
-
             watch.Start();
 
+            //todo null exception;
             return questions[quesPlace].text;
         }
 
@@ -74,7 +79,7 @@ namespace myTyping.Code
                 return true;
             }
 
-            return false;
+          return false;
         }
 
         public questionData getAnswer()

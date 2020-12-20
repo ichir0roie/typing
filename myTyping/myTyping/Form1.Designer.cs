@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.laQues = new System.Windows.Forms.Label();
             this.tbInput = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.laResult = new System.Windows.Forms.Label();
+            this.laRemain = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // laQues
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.laQues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.label1.Location = new System.Drawing.Point(6, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(764, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "tlQ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.laQues.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.laQues.Location = new System.Drawing.Point(6, 196);
+            this.laQues.Name = "laQues";
+            this.laQues.Size = new System.Drawing.Size(764, 27);
+            this.laQues.TabIndex = 0;
+            this.laQues.Text = "tlQ";
+            this.laQues.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbInput
             // 
@@ -56,19 +58,48 @@
             this.tbInput.Size = new System.Drawing.Size(764, 34);
             this.tbInput.TabIndex = 1;
             this.tbInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbInput.TextChanged += new System.EventHandler(this.tbInput_TextChanged);
+            this.tbInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbInput_KeyDown);
+            this.tbInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInput_KeyPress);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.laRemain);
+            this.groupBox1.Controls.Add(this.laResult);
+            this.groupBox1.Controls.Add(this.laQues);
             this.groupBox1.Controls.Add(this.tbInput);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 426);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // laResult
+            // 
+            this.laResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.laResult.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.laResult.Location = new System.Drawing.Point(6, 91);
+            this.laResult.Name = "laResult";
+            this.laResult.Size = new System.Drawing.Size(764, 27);
+            this.laResult.TabIndex = 2;
+            this.laResult.Text = "tlQ";
+            this.laResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // laRemain
+            // 
+            this.laRemain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.laRemain.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.laRemain.Location = new System.Drawing.Point(6, 39);
+            this.laRemain.Name = "laRemain";
+            this.laRemain.Size = new System.Drawing.Size(764, 27);
+            this.laRemain.TabIndex = 3;
+            this.laRemain.Text = "tlQ";
+            this.laRemain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -86,9 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label laQues;
         private System.Windows.Forms.TextBox tbInput;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label laRemain;
+        private System.Windows.Forms.Label laResult;
     }
 }
 
