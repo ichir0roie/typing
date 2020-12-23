@@ -8,3 +8,5 @@ D:\myGit\typing\myTyping\myTyping\obj\Debug\myTyping.csproj.GenerateResource.cac
 D:\myGit\typing\myTyping\myTyping\obj\Debug\myTyping.csproj.CoreCompileInputs.cache
 D:\myGit\typing\myTyping\myTyping\obj\Debug\myTyping.exe
 D:\myGit\typing\myTyping\myTyping\obj\Debug\myTyping.pdb
+D:\myGit\typing\myTyping\myTyping\bin\Debug\Data\myTyping202012.txt
+D:\myGit\typing\myTyping\myTyping\bin\Debug\Data\TextFile1.txt

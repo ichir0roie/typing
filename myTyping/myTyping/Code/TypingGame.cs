@@ -12,8 +12,9 @@ namespace myTyping.Code
         public List<questionData> answers;//todo : finally this is private.
         private System.Diagnostics.Stopwatch watch;
 
-        public int quesPlace = 0;
+        bool gameFinish = true;
 
+        public int quesPlace = 0;
         public TypingGame()
         {
              watch = new System.Diagnostics.Stopwatch();
@@ -21,22 +22,37 @@ namespace myTyping.Code
             answers = new List<questionData>();
         }
 
+        public bool gameContinue()
+        {
+            return !gameFinish;
+        }
+
         public int getRemain()
         {
             return questions.Count;
         }
 
-        public void setQuestions(string[] texts)
+        public void setQuestions(int num)
         {
-            foreach(var text in texts)
+            var data=  getQuesData.getTexts();
+            foreach(var text in data[num])
             {
                 questions.Add(new questionData(text));
             }
+
+            gameFinish = false;
+
         }
 
         public string Ask()
         {
             //todo : select question from questionData
+
+            if (questions.Count <= 0)
+            {
+                gameFinish = true;
+                return "finish";
+            }
 
             quesPlace = new Random().Next(0,questions.Count);
 
@@ -49,7 +65,24 @@ namespace myTyping.Code
 
         public bool response(string input)
         {
-            bool correct = true;
+            if (gameFinish||quesPlace<0)
+            {
+                return false;
+            }
+
+            if (input == questions[quesPlace].text)
+            {
+                var data = questions[quesPlace];
+                questions.RemoveAt(quesPlace);
+                quesPlace = -1;
+                data.clear = true;
+                data.time = watch.Elapsed.TotalSeconds;
+
+                answers.Add(data);
+                return true;
+            }
+
+            bool correct = false;
             for(int i = 0; i < input.Length; i++)
             {
                 if (input[i] != questions[quesPlace].text[i])
@@ -60,11 +93,16 @@ namespace myTyping.Code
                 }
             }
 
+
             return correct;
         }
 
         public bool Entering(string input)
         {
+            if (gameFinish)
+            {
+                return false;
+            }
             watch.Stop();
 
             if (input == questions[quesPlace].text)

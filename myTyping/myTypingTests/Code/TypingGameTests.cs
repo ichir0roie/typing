@@ -49,7 +49,7 @@ namespace myTyping.Code.Tests
             };
 
             var tg = new TypingGame();
-            tg.setQuestions(texts);
+            tg.setQuestions(0);
 
             tg.Ask();
 

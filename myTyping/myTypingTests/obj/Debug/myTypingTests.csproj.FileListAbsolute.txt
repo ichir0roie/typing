@@ -15,3 +15,4 @@ D:\myGit\typing\myTyping\myTypingTests\obj\Debug\myTypingTests.csproj.CoreCompil
 D:\myGit\typing\myTyping\myTypingTests\obj\Debug\myTypingTests.csproj.CopyComplete
 D:\myGit\typing\myTyping\myTypingTests\obj\Debug\myTypingTests.dll
 D:\myGit\typing\myTyping\myTypingTests\obj\Debug\myTypingTests.pdb
+D:\myGit\typing\myTyping\myTypingTests\bin\Debug\Data\myTyping202012.txt

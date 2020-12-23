@@ -1,0 +1,254 @@
+﻿it-swarm-ja.tech
+🔍
+/home/日本語/c#/.NETで改行で文字列を分割する最も簡単な方法は？
+.NETで改行で文字列を分割する最も簡単な方法は？
+私は、.NETで文字列を改行に分割する必要があります。そして、文字列を分割する唯一の方法は Split メソッドを使用することです。しかし、それは私が（簡単に）改行を分割することを可能にしないでしょう、それでそれをするための最良の方法は何ですか？
+
+c#
+.net
+string
+split
+ 704
+2009/10/10RCIX
+文字列を分割するには、文字列の配列をとるオーバーロードを使用する必要があります。
+
+string[] lines = theText.Split(
+    new[] { Environment.NewLine },
+    StringSplitOptions.None
+);
+編集する
+テキスト内でさまざまな種類の改行を処理したい場合は、複数の文字列を照合する機能を使用できます。これはどちらのタイプの改行でも正しく分割され、空の行とテキスト内のスペースを保持します。
+
+string[] lines = theText.Split(
+    new[] { "\r\n", "\r", "\n" },
+    StringSplitOptions.None
+);
+ 1246
+2009/10/10Guffa
+The most convenient and reliable file storage service
+
+Receive your personal cloud storage with 2Gb of space for free
+StringReader を使うのはどうですか？
+
+using (System.IO.StringReader reader = new System.IO.StringReader(input)) {
+    string line = reader.ReadLine();
+}
+ 97
+2012/11/14Clément
+次のように、文字列を簡単に分割できます。
+
+aString.Split(Environment.NewLine.ToCharArray());
+ 42
+2009/10/10nikmd23
+一般的な解決策としては、string.Splitを使用しないようにしてください。元の文字列と分割コピーという両方のメモリ内で、関数を使用するすべての場所でより多くのメモリを使用することになるからです。規模を拡大し始めると、これが問題になる可能性があります。100MBのドキュメントを処理する32ビットのバッチ処理アプリケーションを実行すると、8つの同時スレッドが発生します。私は以前に行ったことがあるわけではありません...
+
+代わりに、このようなイテレータを使用してください。
+
+    public static IEnumerable<string> SplitToLines(this string input)
+    {
+        if (input == null)
+        {
+            yield break;
+        }
+
+        using (System.IO.StringReader reader = new System.IO.StringReader(input))
+        {
+            string line;
+            while( (line = reader.ReadLine()) != null)
+            {
+                yield return line;
+            }
+        }
+    }
+これはあなたがあなたのデータの周りにもっとメモリ効率の良いループをすることを可能にするでしょう。
+
+foreach(var line in document.SplitToLines()) 
+{
+    // one line at a time...
+}
+もちろん、それをすべてメモリーに入れたい場合は、これを実行できます。
+
+var allTheLines = document.SplitToLines.ToArray();
+ 24
+2014/05/01Steve Cooper
+Guffaの答えに基づいて、拡張クラスでは、以下を使用してください。
+
+public static string[] Lines(this string source) {
+    return source.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+}
+ 23
+2011/06/02Erwin Mayer
+Flexible, reliable and affordable cloud hosting
+
+Sign up and get $50 bonus within 30-day!
+文字列変数sの場合：
+
+s.Split(new string[]{Environment.NewLine},StringSplitOptions.None)
+これはあなたの環境の行末の定義を使います。 Windowsでは、行末はCR-LF（キャリッジリターン、ラインフィード）またはC＃のエスケープ文字\r\nです。
+
+String.Join で行を再結合すると、元の文字列と同じになるため、これは信頼性の高い解決策です。
+
+var lines = s.Split(new string[]{Environment.NewLine},StringSplitOptions.None);
+var reconstituted = String.Join(Environment.NewLine,lines);
+Debug.Assert(s==reconstituted);
+しないこと
+
+StringSplitOptions.RemoveEmptyEntries を使用してください。空行に構文上の目的がある場合、Markdownなどのマークアップが壊れるためです。
+Windowsでは、これによって各新しい行に1つの空の文字列要素が作成されるため、区切り文字new char[]{Environment.NewLine}で分割します。
+ 8
+2012/10/04Colonel Panic
+正規表現もオプションです。
+
+    private string[] SplitStringByLineFeed(string inpString)
+    {
+        string[] locResult = Regex.Split(inpString, "[\r\n]+");
+        return locResult;
+    }
+ 7
+2013/01/09user1964822
+この質問に対する他の解決策は再利用可能なコードの分類に入らず、便利ではないので、2ビットを追加すると考えたところです。次のコードブロックは、stringオブジェクトを拡張して、文字列を処理するときに自然な方法として使用できるようにします。
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.ObjectModel;
+
+namespace System
+{
+    public static class StringExtensions
+    {
+        public static string[] Split(this string s, string delimiter, StringSplitOptions options = StringSplitOptions.None)
+        {
+            return s.Split(new string[] { delimiter }, options);
+        }
+    }
+}
+以下のように、任意の文字列から.Split()関数を使用できます。
+
+string[] result;
+
+// pass a string, and the delimiter
+result = string.Split("My simple string", " ");
+
+// split an existing string by delimiter only
+string foo = "my - string - i - want - split";
+result = foo.Split("-");
+
+// you can even pass the split options param. when omitted it is
+// set to StringSplitOptions.None
+result = foo.Split("-", StringSplitOptions.RemoveEmptyEntries);
+改行文字に分割するには、単に"\n"または"\r\n"をdelimiterパラメータとして渡します。
+
+コメント： マイクロソフトがこのオーバーロードを実装すればいいだろう。
+
+ 6
+2016/07/10Kraang Prime
+私は現在VB.NETで（他の答えに基づいて）この関数を使っています。
+
+Private Shared Function SplitLines(text As String) As String()
+    Return text.Split({Environment.NewLine, vbCrLf, vbLf}, StringSplitOptions.None)
+End Function
+最初にプラットフォームローカルの改行に分割しようとし、それから各可能な改行にフォールバックします。
+
+私はこれまで1つのクラス内でこれを必要としていました。もしそれが変わったら、私はおそらくこれをPublicにしてそれをユーティリティクラスに移し、そしてそれを拡張メソッドにさえするでしょう。
+
+ここで、良い方法でラインを元に戻す方法を説明します。
+
+Private Shared Function JoinLines(lines As IEnumerable(Of String)) As String
+    Return String.Join(Environment.NewLine, lines)
+End Function
+ 4
+2013/05/14Rory O'Kane
+まあ、実際に分割する必要があります：
+
+//Constructing string...
+StringBuilder sb = new StringBuilder();
+sb.AppendLine("first line");
+sb.AppendLine("second line");
+sb.AppendLine("third line");
+string s = sb.ToString();
+Console.WriteLine(s);
+
+//Splitting multiline string into separate lines
+string[] splitted = s.Split(new string[] {System.Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
+
+// Output (separate lines)
+for( int i = 0; i < splitted.Count(); i++ )
+{
+    Console.WriteLine("{0}: {1}", i, splitted[i]);
+}
+ 2
+2009/10/10MaciekTalaska
+The most convenient and reliable file storage service
+
+Receive your personal cloud storage with 2Gb of space for free
+string[] lines = text.Split(
+  Environment.NewLine.ToCharArray(), 
+  StringSplitOptions.RemoveEmptyStrings);
+RemoveEmptyStrings オプションを使用すると、\ rの後に\ nがあるため、空のエントリがないことを確認できます。
+
+（コメントを反映するように編集してください:)テキスト内の本物の空行も破棄されることに注意してください。これは通常私が欲しいものですが、それはあなたの要件ではないかもしれません。
+
+ 1
+2009/10/10Serge Wautier
+Environment.Newlineについては知りませんでしたが、これは非常に優れた解決策であると思います。
+
+私の試みはされていただろう：
+
+        string str = "Test Me\r\nTest Me\nTest Me";
+        var splitted = str.Split('\n').Select(s => s.Trim()).ToArray();
+追加の.Trimは、まだ存在している可能性のあるすべての\ rまたは\ nを削除します（たとえば、Windowsの場合はos x改行文字で文字列を分割する場合）。おそらく最速の方法ではありません。
+
+編集：
+
+コメントが正しく指摘しているように、これは行頭または改行の前の空白も削除します。その空白を保存する必要がある場合は、他のオプションのいずれかを使用してください。
+
+ 0
+2009/10/10Max
+Flexible, reliable and affordable cloud hosting
+
+Sign up and get $50 bonus within 30-day!
+文字列をC＃の別の文字列で分割する
+
+手動でエンコードを指定せずにC＃で文字列の一貫したバイト表現を取得する方法
+
+UTF-8 byte []を文字列に変換する方法
+
+StringをIntに変換する方法
+
+文字列を文字列区切り文字で分割するにはどうすればよいですか。
+
+ファイルを読み書きする最も簡単な方法
+
+String.Formatで中括弧「{」をエスケープする
+
+文字列C＃での改行の置き換え
+
+.NETでフォーマット文字列の中かっこ（波括弧）をエスケープする方法
+
+C＃で文字を繰り返すための最良の方法
+
+文字列から数字を見つけて抽出する
+
+文字列の単語をどのように反復するのですか？
+
+NullReferenceExceptionとは何ですか、どうすれば修正できますか？
+
+C＃で列挙型を列挙するにはどうすればよいですか。
+
+大文字と小文字を区別しない 'Contains（string）'
+
+「ブレークポイントは現在ヒットしていません。このドキュメントのシンボルはロードされていません」という問題を解決する方法を教えてください。警告？
+
+HTTPの作り方 POST ウェブキャスト
+
+MS OfficeをインストールせずにC＃でExcel（.XLSおよび.XLSX）ファイルを作成する方法？
+
+「非同期」と「待機」を使用する方法とタイミング
+
+ディープクローンオブジェクト
+
+Content dated before 2011-04-08 (UTC) is licensed under CC BY-SA 2.5. Content dated from 2011-04-08 up to but not including 2018-05-02 (UTC) is licensed under CC BY-SA 3.0. Content dated on or after 2018-05-02 (UTC) is licensed under CC BY-SA 4.0. | Privacy

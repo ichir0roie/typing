@@ -85,8 +85,12 @@
     <Folder Include="Log\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\myTyping202012Data.txt" />
-    <Content Include="Data\myTyping202012.txt" />
+    <Content Include="Data\myTyping202012.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TextFile1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,57 +21,41 @@ namespace myTyping
             InitializeComponent();
 
 
-            string[] texts = {
-                "たぬき寝入り",
-                "里帰り",
-                "言葉遣い",
-                "平行四辺形",
-                "日帰り温泉",
-                "ペンダント",
-                "向かい風",
-                "雑木林",
-                "ブッシュドノエル",
-                "除夜の鐘",
-                "幻想的",
-                "伝統行事",
-                "慌てふためく",
-                "鮮やかな色",
-                "きんぴらごぼう",
-                "湯たんぽ",
-                "奈良の大仏",
-                "ベビーカー",
-                "パーティーグッズ",
-                "社交辞令",
-                "新しいダウンジャケットが欲しいな",
-                "キラキラ輝くイルミネーション",
-                "今年はスノーボードに挑戦だ",
-                "待ちに待ったクリスマス",
-                "良いお年をお迎えください",
-                "二人で肩を寄せ合って歩く",
-                "ふかふかのマフラーを巻いてご満悦",
-                "何をプレゼントしたらいいんだろう",
-                "喉元過ぎれば熱さを忘れる",
-                "もこもこに重ね着をして出かける",
-                "ガッポイ"
-            };
-
-
-            tg.setQuestions(texts);
+            tg.setQuestions(0);
 
             ask();
         }
 
         private void ask()
         {
-            var text=tg.Ask();
-            laQues.Text = text;
+            if (tg.gameContinue())
+            {
+                var text = tg.Ask();
+                laQues.Text = text;
 
-            laRemain.Text = tg.getRemain().ToString();
+                laRemain.Text = tg.getRemain().ToString();
+            }
+            else
+            {
+                finisher();
+            }
+            
+        }
+
+        private void finisher()
+        {
+            laQues.Text = "finish!!";
         }
 
         private void tbInput_TextChanged(object sender, EventArgs e)
         {
-
+            var result = tg.response(tbInput.Text);
+            if (result)
+            {
+                laResult.Text = "TRUE!";
+                tbInput.Text = "";
+                ask();
+            }
         }
 
         private void tbInput_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,6 +78,11 @@ namespace myTyping
                 tbInput.Text = "";
                 ask();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

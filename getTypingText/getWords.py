@@ -9,7 +9,7 @@ for i in file:
         i=i.replace("<p class=\"kanji\">","")
         i=i.replace("</p>","")
         i=i.replace(" ","").replace("\t","").replace("\n","").replace("\r","")
-        print(i)
+        #print(i)
 
     if("<p class=\"kana\">(" in i):
         i=i.replace("<p class=\"kana\">(","")

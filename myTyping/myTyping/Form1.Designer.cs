@@ -31,8 +31,8 @@
             this.laQues = new System.Windows.Forms.Label();
             this.tbInput = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.laResult = new System.Windows.Forms.Label();
             this.laRemain = new System.Windows.Forms.Label();
+            this.laResult = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,18 +76,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 426);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            // 
-            // laResult
-            // 
-            this.laResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.laResult.Font = new System.Drawing.Font("MS UI Gothic", 20F);
-            this.laResult.Location = new System.Drawing.Point(6, 91);
-            this.laResult.Name = "laResult";
-            this.laResult.Size = new System.Drawing.Size(764, 27);
-            this.laResult.TabIndex = 2;
-            this.laResult.Text = "tlQ";
-            this.laResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // laRemain
             // 
@@ -100,6 +89,18 @@
             this.laRemain.TabIndex = 3;
             this.laRemain.Text = "tlQ";
             this.laRemain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // laResult
+            // 
+            this.laResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.laResult.Font = new System.Drawing.Font("MS UI Gothic", 20F);
+            this.laResult.Location = new System.Drawing.Point(6, 91);
+            this.laResult.Name = "laResult";
+            this.laResult.Size = new System.Drawing.Size(764, 27);
+            this.laResult.TabIndex = 2;
+            this.laResult.Text = "tlQ";
+            this.laResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
