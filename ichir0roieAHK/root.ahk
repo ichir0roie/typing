@@ -3,5 +3,5 @@
 #Include, PrintDate.ahk
 #Include, PrintMaru.ahk
 #Include, FileCreater.ahk
-;#Include, ColemakBreak.ahk
+#Include, ColemakBreak.ahk
 
