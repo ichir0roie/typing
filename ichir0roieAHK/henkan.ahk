@@ -1,8 +1,8 @@
 
-sc079 & j::BackSpace
-sc079 & k::Space
-sc079 & l::Enter
-sc079 & `;::Del
+sc079 & j::Space
+sc079 & k::Enter
+sc079 & m::BackSpace
+sc079 & ,::Del
 
 
 sc079 & a:: Numpad0
