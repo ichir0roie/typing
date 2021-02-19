@@ -1,6 +1,8 @@
 #Include IME.ahk
 
 #Include, muhenkan.ahk
+#Include, henkan.ahk
+
 
 ;use input mode,this is last
 #Include DirectInput.ahk
