@@ -1,8 +1,11 @@
 
-sc079 & j::Space
+sc079 & m::Space
 sc079 & k::Enter
-sc079 & m::BackSpace
-sc079 & ,::Del
+sc079 & l::BackSpace
+sc079 & `;::Del
+
+
+sc079 & j::Send,{sc029}
 
 
 sc079 & a:: Numpad0
