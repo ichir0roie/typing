@@ -154,18 +154,22 @@ s/	ゎ
 \	:
 
 
+dw	　
 de	…
+dx	;
+dc	:
+
+sw	
+se	
+sx	%
+sc	$
+
+li	"
+lo	'
+l,	,
+l.	.
+
 ki	↑
 k,	↓
 km	←
 k.	→
-
-dc	:
-dx	;
-
-l,	,
-l.	.
-
-sc	"
-sx	'
-
