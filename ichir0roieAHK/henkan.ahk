@@ -1,11 +1,14 @@
 
-sc079 & m::Space
-sc079 & k::Enter
-sc079 & l::BackSpace
-sc079 & `;::Del
+;無変換+右手に矢印キーなどを割り当て
+sc079 & j:: Left	
+sc079 & k:: Up  	
+sc079 & l:: Down	
+sc079 & `;:: Right	
+sc079 & m:: Home
+sc079 & ,:: PgUp
+sc079 & .:: PgDn
+sc079 & /:: End
 
-
-sc079 & j::Send,{sc029}
 
 
 sc079 & a:: Numpad0

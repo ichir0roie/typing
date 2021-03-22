@@ -1,18 +1,18 @@
 #Include IME.ahk
 
 
-Space::Shift
+
+
+sc07B::Shift
+sc079::Shift
 
 sc03A::Tab
 Tab::sc029
 sc029::Esc
 Esc::NumLock
 
-LAlt::LCtrl
-LCtrl::LAlt
 
 #Include, muhenkan.ahk
-#Include, henkan.ahk
 
 
 ;use input mode,this is last
