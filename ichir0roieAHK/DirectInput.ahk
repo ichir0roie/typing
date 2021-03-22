@@ -12,8 +12,6 @@
 8::(
 9::SendInput,{{}
 0::[
--::$
-^::SendInput, {`%}
 
 sc073::SendInput, {:}
 
