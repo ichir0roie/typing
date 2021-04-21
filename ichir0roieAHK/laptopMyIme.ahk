@@ -4,7 +4,8 @@
 ; sc079::Shift
 
 Space::Shift
-Enter::RCtrl
+LShift::LCtrl
+RShift::RCtrl
 
 sc03A::Tab
 Tab::sc029
