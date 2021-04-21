@@ -1,19 +1,17 @@
 #Include IME.ahk
 
+; sc07B::Shift
+; sc079::Shift
 
-
-
-sc07B::Shift
-sc079::Shift
+Space::Shift
+Enter::RCtrl
 
 sc03A::Tab
 Tab::sc029
 sc029::Esc
 Esc::NumLock
 
-
 #Include, muhenkan.ahk
-
 
 ;use input mode,this is last
 #Include DirectInput.ahk
