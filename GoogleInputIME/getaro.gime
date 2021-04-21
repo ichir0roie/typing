@@ -154,16 +154,24 @@ s/	ゎ
 \	:
 
 
-df	　
-
-de	…
 dx	;
 dc	:
+dv	…
 
-sw	
-se	
 sx	%
 sc	$
+sv	\
+
+df	　
+
+
+dw	)
+de	}
+dr	]
+
+sw	(
+se	{
+sr	[
 
 li	"
 lo	'
@@ -175,10 +183,3 @@ k,	↓
 km	←
 k.	→
 
-dr	)
-df	}
-dv	]
-
-sr	(
-sf	{
-sv	[
