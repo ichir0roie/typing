@@ -158,6 +158,7 @@ dx	;
 dc	:
 dv	…
 
+sz	&
 sx	%
 sc	$
 sv	\
