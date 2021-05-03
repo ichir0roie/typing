@@ -1,7 +1,7 @@
 #Include IME.ahk
 
 ; sc07B::Shift
-; sc079::Shift
+sc079::Space
 
 Space::Shift
 LShift::LCtrl
